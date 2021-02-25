@@ -24,7 +24,7 @@ import java.time.LocalDate;
 @ToString
 public class CrearClienteDto {
 
-    private static final String NOMBRE_PATTERN = "[a-zA-z]+";
+    private static final String NOMBRE_PATTERN = "[a-zA-Z]+";
 
     @Pattern(regexp = NOMBRE_PATTERN, message = "nombre invalido")
     private String nombre;
