@@ -16,19 +16,16 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import pe.com.fpineda.challenge.cliente.BaseTest;
+import pe.com.fpineda.challenge.cliente.TestBase;
 import pe.com.fpineda.challenge.cliente.api.ObtenerClientesKPIApi;
-import pe.com.fpineda.challenge.cliente.api.ObtenerListaClienteApi;
-import pe.com.fpineda.challenge.cliente.config.AppConfigTests;
+import pe.com.fpineda.challenge.cliente.config.TestAppConfig;
 import pe.com.fpineda.challenge.cliente.core.model.ClientesKPI;
 import pe.com.fpineda.challenge.cliente.core.port.ObtenerClientesKPIPort;
-import pe.com.fpineda.challenge.cliente.core.port.ObtenerListaClientePort;
 import pe.com.fpineda.challenge.cliente.core.usecase.CrearClienteUseCase;
 import pe.com.fpineda.challenge.cliente.core.usecase.ObtenerClientesKPIUseCase;
 import pe.com.fpineda.challenge.cliente.core.usecase.ObtenerListaClientesUseCase;
 import pe.com.fpineda.challenge.cliente.infrastructure.adapter.persistence.ClienteJdbcAdapter;
 import pe.com.fpineda.challenge.cliente.infrastructure.adapter.web.controller.ClienteController;
-import pe.com.fpineda.challenge.cliente.infrastructure.adapter.web.dto.ListaClientes;
 
 import javax.sql.DataSource;
 import java.net.URI;
@@ -41,8 +38,8 @@ import java.util.Objects;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {AppConfigTests.class, ObtenerClientesKPIIntegrationTest.Configuration.class, ClienteController.class})
-class ObtenerClientesKPIIntegrationTest extends BaseTest {
+@ContextConfiguration(classes = {TestAppConfig.class, ObtenerClientesKPIIntegrationTestBase.Configuration.class, ClienteController.class})
+class ObtenerClientesKPIIntegrationTestBase extends TestBase {
 
     static class Configuration {
 

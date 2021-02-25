@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @Profile("test")
 @Configuration
 @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
-public class AppConfigTests {
+public class TestAppConfig {
 
     @Value("${spring.datasource.url}")
     private String url;

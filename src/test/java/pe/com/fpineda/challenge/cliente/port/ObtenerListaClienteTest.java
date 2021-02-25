@@ -10,7 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import pe.com.fpineda.challenge.cliente.config.AppConfigTests;
+import pe.com.fpineda.challenge.cliente.config.TestAppConfig;
 import pe.com.fpineda.challenge.cliente.core.port.ObtenerListaClientePort;
 import pe.com.fpineda.challenge.cliente.infrastructure.adapter.persistence.ClienteJdbcAdapter;
 
@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@ContextConfiguration(classes = AppConfigTests.class)
+@ContextConfiguration(classes = TestAppConfig.class)
 class ObtenerListaClienteTest {
 
     private ObtenerListaClientePort port;

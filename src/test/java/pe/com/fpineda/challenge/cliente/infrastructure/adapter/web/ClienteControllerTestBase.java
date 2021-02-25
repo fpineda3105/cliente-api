@@ -15,7 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import pe.com.fpineda.challenge.cliente.BaseTest;
+import pe.com.fpineda.challenge.cliente.TestBase;
 import pe.com.fpineda.challenge.cliente.core.command.CrearClientCommand;
 import pe.com.fpineda.challenge.cliente.core.usecase.CrearClienteUseCase;
 import pe.com.fpineda.challenge.cliente.core.usecase.ObtenerClientesKPIUseCase;
@@ -37,8 +37,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(value = ClienteController.class)
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {ClienteControllerTest.Configuration.class, ClienteController.class})
-class ClienteControllerTest extends BaseTest {
+@ContextConfiguration(classes = {ClienteControllerTestBase.Configuration.class, ClienteController.class})
+class ClienteControllerTestBase extends TestBase {
 
     @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
     static class Configuration {

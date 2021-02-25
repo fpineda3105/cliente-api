@@ -10,15 +10,14 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.*;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import pe.com.fpineda.challenge.cliente.BaseTest;
+import pe.com.fpineda.challenge.cliente.TestBase;
 import pe.com.fpineda.challenge.cliente.api.CrearClienteApi;
-import pe.com.fpineda.challenge.cliente.config.AppConfigTests;
+import pe.com.fpineda.challenge.cliente.config.TestAppConfig;
 import pe.com.fpineda.challenge.cliente.core.port.CrearClientePort;
 import pe.com.fpineda.challenge.cliente.core.usecase.CrearClienteUseCase;
 import pe.com.fpineda.challenge.cliente.core.usecase.ObtenerClientesKPIUseCase;
@@ -42,8 +41,8 @@ import static org.mockito.Mockito.reset;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {CrearClienteIntegrationTest.Configuration.class, AppConfigTests.class, ClienteController.class, ClienteExceptionController.class})
-class CrearClienteIntegrationTest extends BaseTest {
+@ContextConfiguration(classes = {CrearClienteIntegrationTestBase.Configuration.class, TestAppConfig.class, ClienteController.class, ClienteExceptionController.class})
+class CrearClienteIntegrationTestBase extends TestBase {
 
     static class Configuration {
 

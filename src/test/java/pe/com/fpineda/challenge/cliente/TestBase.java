@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * @author fpineda
  */
-public class BaseTest {
+public class TestBase {
 
     private static ObjectMapper mapper = new ObjectMapper();
 
