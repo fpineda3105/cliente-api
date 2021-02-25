@@ -12,6 +12,8 @@ public class FechaUtils {
     private static final int MIN_AGE = 70;
     private static final int MAX_AGE = 80;
 
+    private FechaUtils() {}
+
     public static LocalDate generarPosibleFechaMuerte(int edadActual) {
         var edadMuerte = (int) rand.ints(MIN_AGE, (MAX_AGE + 1)).limit(10).average().getAsDouble();
         var anosRestantes = edadMuerte - edadActual;

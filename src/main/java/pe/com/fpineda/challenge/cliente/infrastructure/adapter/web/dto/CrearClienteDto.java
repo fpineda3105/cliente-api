@@ -24,10 +24,12 @@ import java.time.LocalDate;
 @ToString
 public class CrearClienteDto {
 
-    @Pattern(regexp = "[a-zA-z]+", message = "nombre invalido")
+    private static final String NOMBRE_PATTERN = "[a-zA-z]+";
+
+    @Pattern(regexp = NOMBRE_PATTERN, message = "nombre invalido")
     private String nombre;
 
-    @Pattern(regexp = "[a-zA-z]+", message = "apellido invalido")
+    @Pattern(regexp = NOMBRE_PATTERN, message = "apellido invalido")
     private String apellido;
 
     @Min(value = 18, message = "cliente debe ser mayor de edad")
