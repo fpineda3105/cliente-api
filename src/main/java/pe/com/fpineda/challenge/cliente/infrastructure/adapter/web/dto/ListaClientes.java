@@ -2,9 +2,9 @@ package pe.com.fpineda.challenge.cliente.infrastructure.adapter.web.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
-import pe.com.fpineda.challenge.cliente.core.model.Cliente;
 
 import java.util.List;
 
@@ -14,8 +14,10 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 @Getter
+@Builder
 public class ListaClientes {
 
     @JsonProperty("result")
-    private List<Cliente> lista;
+    private List<ClienteDto> lista;
+
 }

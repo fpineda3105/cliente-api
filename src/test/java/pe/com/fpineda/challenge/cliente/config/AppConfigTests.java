@@ -1,5 +1,6 @@
 package pe.com.fpineda.challenge.cliente.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -32,6 +33,7 @@ public class AppConfigTests {
     private String driver;
 
     @Bean
+    @Qualifier("datasource")
     public DataSource getDataSource() {
         var dataSourceBuilder = DataSourceBuilder.create();
 

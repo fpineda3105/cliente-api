@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.com.challenge</groupId>
-	<artifactId>cliente</artifactId>
+	<artifactId>cliente-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cliente</name>
-	<description>Clientes challenge</description>
+	<name>cliente-api</name>
+	<description>Clientes api challenge</description>
 	
 	<properties>
 		<java.version>11</java.version>

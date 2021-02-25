@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface ObtenerListaClientePort {
 
-    List<Cliente> obtenerLista();
+    List<Cliente> obtenerListaClientes();
 }

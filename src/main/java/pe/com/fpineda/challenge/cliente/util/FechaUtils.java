@@ -17,6 +17,10 @@ public class FechaUtils {
     public static LocalDate generarPosibleFechaMuerte(int edadActual) {
         var edadMuerte = (int) rand.ints(MIN_AGE, (MAX_AGE + 1)).limit(10).average().getAsDouble();
         var anosRestantes = edadMuerte - edadActual;
+        if (anosRestantes <= 0) {
+            anosRestantes = MAX_AGE + 1;
+        }
+
         var fechaActual  = LocalDate.now();
 
         var anoMuerte = fechaActual.plusYears(anosRestantes).getYear();

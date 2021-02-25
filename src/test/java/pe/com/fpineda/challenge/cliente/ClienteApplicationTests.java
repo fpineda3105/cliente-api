@@ -15,9 +15,4 @@ class ClienteApplicationTests {
 	void contextLoads() {
 	}
 
-	@Configuration
-	static class ClienteApplicationTestsConfig {
-
-	}
-
 }

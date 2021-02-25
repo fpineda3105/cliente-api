@@ -2,6 +2,7 @@ package pe.com.fpineda.challenge.cliente.port;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pe.com.fpineda.challenge.cliente.config.AppConfigTests;
-import pe.com.fpineda.challenge.cliente.core.port.ObtenerListaClientePort;
+import pe.com.fpineda.challenge.cliente.core.port.CrearClientePort;
 import pe.com.fpineda.challenge.cliente.infrastructure.adapter.persistence.ClienteJdbcAdapter;
+import pe.com.fpineda.challenge.cliente.util.TestUtilsFactory;
 
 import javax.sql.DataSource;
 
@@ -23,9 +25,9 @@ import javax.sql.DataSource;
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 @ContextConfiguration(classes = AppConfigTests.class)
-public class ObtenerListaClienteTest {
+class CrearClienteTest {
 
-    private ObtenerListaClientePort port;
+    private CrearClientePort port;
 
     @Autowired
     private DataSource dataSource;
@@ -37,27 +39,17 @@ public class ObtenerListaClienteTest {
 
     @Test
     @Sql(scripts = "/schema.sql")
-    void deberia_obtener_lista_clientes_vacia() {
+    @DisplayName("Creacion de cliente a traves de Port")
+    void deberia_crear_cliente_exitosamente() {
         // Prepare data
+        var clienteParaCrear = TestUtilsFactory.buildCrearClienteDto();
 
         // Execution
-        var result = this.port.obtenerListaClientes();
+        var result = this.port.create(clienteParaCrear.toCommand());
 
         // Assertions
-        Assertions.assertEquals(0, result.size());
+        Assertions.assertEquals(1L,result.getId());
 
     }
 
-    @Test
-    @Sql(scripts = {"/schema.sql", "/insert_3_rows.sql"})
-    void deberia_obtener_lista_con_3_clientes() {
-        // Prepare data
-
-        // Execution
-        var result = this.port.obtenerListaClientes();
-
-        // Assertions
-        Assertions.assertEquals(3, result.size());
-
-    }
 }

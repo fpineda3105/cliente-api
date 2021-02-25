@@ -52,7 +52,7 @@ public class ClienteJdbcAdapter implements CrearClientePort, ObtenerListaCliente
     }
 
     @Override
-    public List<Cliente> obtenerLista() {
+    public List<Cliente> obtenerListaClientes() {
         return this.jdbcTemplate.query(SELECCIONA_LISTA_CLIENTES, new RowClienteMapper());
     }
 

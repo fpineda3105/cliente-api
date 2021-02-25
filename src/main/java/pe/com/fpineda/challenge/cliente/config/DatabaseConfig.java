@@ -5,6 +5,7 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import pe.com.fpineda.challenge.cliente.infrastructure.adapter.persistence.ClienteJdbcAdapter;
 
 import javax.sql.DataSource;
 
@@ -35,6 +36,13 @@ public class DatabaseConfig {
 
         return dataSourceBuilder.build();
     }
+
+    @Bean
+    public ClienteJdbcAdapter clienteJdbcAdapter() {
+        return new ClienteJdbcAdapter(this.getDataSource());
+    }
+
+
 
 
 }
