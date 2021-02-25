@@ -42,7 +42,7 @@ import java.util.Objects;
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 @ContextConfiguration(classes = {AppConfigTests.class, ObtenerClientesKPIIntegrationTest.Configuration.class, ClienteController.class})
-public class ObtenerClientesKPIIntegrationTest extends BaseTest {
+class ObtenerClientesKPIIntegrationTest extends BaseTest {
 
     static class Configuration {
 

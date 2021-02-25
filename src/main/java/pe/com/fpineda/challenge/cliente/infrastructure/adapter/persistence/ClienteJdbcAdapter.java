@@ -20,8 +20,8 @@ import java.util.Map;
  */
 public class ClienteJdbcAdapter implements CrearClientePort, ObtenerListaClientePort, ObtenerClientesKPIPort {
 
-    private final static String SELECCIONA_LISTA_CLIENTES = "SELECT * FROM CLIENTE";
-    private final static String SELECIONA_CLIENTES_KPI = "SELECT STDDEV_SAMP(edad) as desviacionEstandar, AVG(edad) as promedioEdad FROM CLIENTE";
+    private static final String SELECCIONA_LISTA_CLIENTES = "SELECT * FROM CLIENTE";
+    private static final String SELECIONA_CLIENTES_KPI = "SELECT STDDEV_SAMP(edad) as desviacionEstandar, AVG(edad) as promedioEdad FROM CLIENTE";
 
 
     private final SimpleJdbcInsert simpleJdbcInsert;

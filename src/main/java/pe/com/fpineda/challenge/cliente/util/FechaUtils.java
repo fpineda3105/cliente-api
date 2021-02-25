@@ -1,16 +1,14 @@
 package pe.com.fpineda.challenge.cliente.util;
 
-import org.apache.tomcat.jni.Local;
-
+import java.security.SecureRandom;
 import java.time.LocalDate;
-import java.util.Random;
 
 /**
  * @author fpineda
  */
 public class FechaUtils {
 
-    private static final Random rand = new Random();
+    private static final SecureRandom rand = new SecureRandom();
     private static final int MIN_AGE = 70;
     private static final int MAX_AGE = 80;
 

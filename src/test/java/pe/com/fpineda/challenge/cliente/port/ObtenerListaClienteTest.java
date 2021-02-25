@@ -23,7 +23,7 @@ import javax.sql.DataSource;
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 @ContextConfiguration(classes = AppConfigTests.class)
-public class ObtenerListaClienteTest {
+class ObtenerListaClienteTest {
 
     private ObtenerListaClientePort port;
 
