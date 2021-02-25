@@ -37,8 +37,8 @@ import java.util.Objects;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {TestAppConfig.class, ObtenerListaClientesIntegrationTestBase.Configuration.class, ClienteController.class})
-class ObtenerListaClientesIntegrationTestBase extends TestBase {
+@ContextConfiguration(classes = {TestAppConfig.class, ObtenerListaClientesIntegrationTest.Configuration.class, ClienteController.class})
+class ObtenerListaClientesIntegrationTest extends TestBase {
 
     static class Configuration {
 

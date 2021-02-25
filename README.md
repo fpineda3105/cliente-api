@@ -24,3 +24,6 @@ mvn spring-boot:run
 ```
 mvn verify
 ```
+
+## Swagger 
+http://localhost/swagger-ui/

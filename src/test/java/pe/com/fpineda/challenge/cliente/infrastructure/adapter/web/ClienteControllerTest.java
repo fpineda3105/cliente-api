@@ -37,8 +37,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(value = ClienteController.class)
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {ClienteControllerTestBase.Configuration.class, ClienteController.class})
-class ClienteControllerTestBase extends TestBase {
+@ContextConfiguration(classes = {ClienteControllerTest.Configuration.class, ClienteController.class})
+class ClienteControllerTest extends TestBase {
 
     @EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
     static class Configuration {

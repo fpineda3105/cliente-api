@@ -41,8 +41,8 @@ import static org.mockito.Mockito.reset;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
-@ContextConfiguration(classes = {CrearClienteIntegrationTestBase.Configuration.class, TestAppConfig.class, ClienteController.class, ClienteExceptionController.class})
-class CrearClienteIntegrationTestBase extends TestBase {
+@ContextConfiguration(classes = {CrearClienteIntegrationTest.Configuration.class, TestAppConfig.class, ClienteController.class, ClienteExceptionController.class})
+class CrearClienteIntegrationTest extends TestBase {
 
     static class Configuration {
 
