@@ -16,6 +16,9 @@
 	<properties>
 		<java.version>11</java.version>
 		<jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+		<sonar.projectKey>fpineda3105_cliente-api</sonar.projectKey>
+		<sonar.organization>fpineda3105</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	
 	<dependencies>
