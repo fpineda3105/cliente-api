@@ -18,7 +18,7 @@ public class FechaUtils {
         var edadMuerte = (int) rand.ints(MIN_AGE, (MAX_AGE + 1)).limit(10).average().getAsDouble();
         var anosRestantes = edadMuerte - edadActual;
         if (anosRestantes <= 0) {
-            anosRestantes = MAX_AGE + 1;
+            anosRestantes = 1;
         }
 
         var fechaActual  = LocalDate.now();
